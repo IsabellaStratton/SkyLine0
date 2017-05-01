@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="response.css">
+
+
+
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+
+
+</head>
+
+
+<body>
+
+<header class="container">
+<div class="arrow">
+    <a class="btn" href="home.html"> <img src="arrow.jpg" width="80vw" height="auto" style="margin-top:2vw"></a>
+
+</div>
+  <div class="img">
+    <img src="Logofinal copy.jpg" alt="blah" width="5vw" height="auto">
+</div>
+      <div id="div2" style="font-size: 5vw; text-align:center; margin-top:3vw; margin-left:6vw ">My Schedule</div>
+  </header>
+  <hr />
+  
+  
+<div class="homescreen">
+<div class="flex-container">
+<div class="row">
+
+
+
+<div class="col-m-10">
+  
+<iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=bright"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups" style="width: 80vw;height:40vw"></iframe>
+    
+    </div>
+    
+ <div class="col-f-3">
+
+  <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><p>Drag up 8 icons to represent your day</p></div>
+</div>
+
+
+
+  </div>
+ 
+  <div class="col-12 menu7">
+  <h2>AVAILABLE</h2>
+</div>
+<div class="col-1">
+</div>
+<div class="col-10">
+
+<p style="text-decoration:underline">Transport</p>
+<img id="drag19" src="png/car.png" alt="blah" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag3" src="png/bike.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag4" src="png/boat.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag44" src="png/swimming.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag45" src="png/taking off.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag46" src="png/taxi.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag47" src="png/train.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag48" src="png/tram.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag49" src="png/truck.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag51" src="png/walk.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag10" src="png/bus.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag26" src="png/motorbike.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag23" src="png/landing.png" alt="blah" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw"> 
+<img id="drag34" src="png/shuttle.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag35" src="png/rowing.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag36" src="png/run.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag12" src="png/child.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag52" src="png/wheelchair.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+
+<p style="text-decoration:underline">Places</p>
+<img id="drag6" src="png/beach.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag2" src="png/bed.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag7" src="png/building.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag8" src="png/building4.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag9" src="png/building3.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag53" src="png/business.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag54" src="png/work.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag40" src="png/shopping.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag37" src="png/school.png" draggable="true" ondragstart="drag(event)" width="60vw" height="60vw" hspace="7vw">
+<img id="drag39" src="png/shop.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag30" src="png/nature.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+
+<p style="text-decoration:underline">Actions/Hobbies</p>
+<img id="drag3" src="png/bike.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag44" src="png/swimming.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag51" src="png/walk.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag35" src="png/rowing.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag36" src="png/run.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag1" src="png/couch.png" draggable="true" ondragstart="drag(event)" width="60vw" height="60vw" hspace="7vw">
+<img id="drag38" src="png/seat.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag41" src="png/sofa.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag55" src="png/nothing.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag5" src="png/book.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag11" src="png/camera.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag13" src="png/clock.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag15" src="png/eat.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag16" src="png/explore.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag17" src="png/flower.png" alt="blah" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag18" src="png/gym.png" alt="blah" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag20" src="png/home.png" alt="blah" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag21" src="png/golf.png" alt="blah" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag22" src="png/drink.png" alt="blah" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag24" src="png/lightbulb.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag25" src="png/lightening.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag27" src="png/mountain.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag28" src="png/movie.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag29" src="png/music.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag31" src="png/paintbrush.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag32" src="png/pet.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag33" src="png/puzzle.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag50" src="png/tv.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+
+
+<img id="drag42" src="png/snow.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag43" src="png/sun.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+<img id="drag14" src="png/cloud.png" draggable="true" ondragstart="drag(event)" width="auto" height="60vw" hspace="7vw">
+  
+  </div>
+
+
+</div>
+   
+    </div>
+    
+
+<div class="homescreen">
+<div class="row">
+    
+    <hr>
+    
+ <p id="demo">Click to get your position.</p>
+
+<button onclick="getLocation()">Get it</button>
+
+<div id="mapholder"></div>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=key=AIzaSyAy8lWoi12Pu0Dn3ZcRz1VofPQj2H54EUg";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
+
+<hr>
+
+<div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/forecast/week?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank">meteoblue</a> <p>SKYLINE 2017</p></div>
+
+
+</div>
+</div>
+
+</body>
+    
+</html>

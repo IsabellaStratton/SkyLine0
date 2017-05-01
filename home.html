@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="response.css">
+
+</head>
+<body>
+<header class="container">
+  <div class="img">
+    <img src="Logofinal copy.jpg" alt="blah" width="5vw" height="auto">
+</div>
+      <div id="div2" style="font-size: 5vw; text-align:center; margin-top:3vw; margin-left:6vw ">HOME</div>
+            
+
+      
+    
+  </header>
+  <hr />
+<div class="homescreen">
+<div class="row">
+
+
+
+<div class="col-12 menu">
+        <h1><a class="btn" href="weather.html">  WEATHER</a></h1>
+
+    
+  
+  </div>
+  
+  <div class="col-12 menu2">
+  <h1 style="margin-bottom:5vw"><a class="btn" href="daily.html">  SCHEDULE</a></h1>
+    
+  
+  </div>
+
+
+
+<iframe src="https://www.meteoblue.com/en/weather/widget/three?geoloc=detect&nocurrent=0&noforecast=0&noforecast=1&days=4&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&layout=bright"  frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups" style="width: 360px;height: 221px; float:left; margin-left:12vw"></iframe>
+
+
+
+    
+    <iframe src="https://www.meteoblue.com/en/weather/widget/daily?geoloc=detect&days=7&tempunit=CELSIUS&windunit=KILOMETER_PER_HOUR&coloured=monochrome&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&windgust=0&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&pressure=0&layout=light"  frameborder="0" allowtransparency="true" style="width: 378px;height: 303px"></iframe>
+    
+    <hr>
+    
+ <p id="demo">Click to get your position.</p>
+
+<button onclick="getLocation()">Get it</button>
+
+<div id="mapholder"></div>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+    +latlon+"&zoom=14&size=400x300&sensor=key=AIzaSyAy8lWoi12Pu0Dn3ZcRz1VofPQj2H54EUg";
+    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+}
+
+
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            x.innerHTML = "User denied the request for Geolocation."
+            break;
+        case error.POSITION_UNAVAILABLE:
+            x.innerHTML = "Location information is unavailable."
+            break;
+        case error.TIMEOUT:
+            x.innerHTML = "The request to get user location timed out."
+            break;
+        case error.UNKNOWN_ERROR:
+            x.innerHTML = "An unknown error occurred."
+            break;
+    }
+}
+</script>
+
+<hr>
+
+<div><!-- DO NOT REMOVE THIS LINK --><a href="https://www.meteoblue.com/en/weather/forecast/week?utm_source=weather_widget&utm_medium=linkus&utm_content=daily&utm_campaign=Weather%2BWidget" target="_blank">meteoblue</a><p>SKYLINE 2017</p></div>
+
+</body>
+</html>
